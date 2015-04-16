@@ -1,0 +1,37 @@
+- What happens when you initialize a repository? Why do you need to do it?
+
+A .git folder is created in the directory. That folder will track changes performed in the repository
+
+- How is the staging area different from the working directory and 
+the repository? What value do you think it offers?
+
+The staging area keep track of the files that will be commited on the next commit. A file in the working repository can either be untracked, unmodified, modified or staged. Untracked files are not part of the repository (git add to add them). Unmodified files are part of the repository but haven't been modified since last commit. Modified files are part of the repository and have been modified since last commit, however they won't be commited unless they are staged (git add). Staged files are part of the repository, have been modified, and added to the staging area, so they will be commited in the next commit.
+So the working directory allows files in different states, so you can mess around with them. The staging area allows to controls which files to commit among the new/modified files in the working directory. 
+
+
+- How can you use the staging area to make sure you have one 
+commit per logical change?
+
+The staging area allows to make several logical commit when you have performed several changes but not commited any yet. Adding to the staging area only the files that affect a logical commit makes it easier.
+
+- What are some situations when branches would be helpful in 
+keeping your history organized? How would branches help?
+
+Branch are ideal when you want to experiment with your code. Maybe refactoring, 
+including a different language, or a new experimental feature. In those cases, branches allo to have a working copy (master), and experiment with no worries in your branch. Only when you are sure your new feature works, add it to the master branch.
+
+- How do the diagrams help you visualize the branch structure?
+
+It helps very much to see the history of the commits, and see which ones where permoed in each branch, and see which ones you can find in each branch.
+
+- What is the result of merging two branches together? Why 
+do we represent it in the diagram the way we do?
+
+It merges the code of the two branches, and the commits too, sorted by timestamp. 
+So you can clearly see the evolution.
+
+- What are the pros and cons of GitÎéÎ÷s automatic merging
+vs. always doing merges manually?
+
+Auto-merge is a fantastic tool.
+
